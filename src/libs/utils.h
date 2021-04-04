@@ -5,6 +5,7 @@
 #include <limits.h>
 #include <string.h>
 
+#include "graph.h"
 
 #define READ_MODE "r+"
 #define APPEND_MODE "a+"
