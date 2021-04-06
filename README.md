@@ -1,11 +1,16 @@
-<h1 align="center">
-    lab-0X: Titlu
-  </h1>
+<h2 align="center">
+ lab-08: Grafuri - notiuni generale
+</h2>
 
-### Observatii:
-- se va apasa pe butonul verde ___Use this Template___ din aceasta pagina pt ca crea un laborator ce are acest template.
-- se vor crea doua laboratore denumite lab-0X-solved si lab-0X-tasks ( in cazul in care X > 9 se va numii lab-X-solved si lab-X-tasks ) ambele fiind generate ca in observatia anterioara.
-- ___laboratoarele trebuie sa fie private___
-- se va adauga la sectiunea ___About___ un mic sumar cu ce reprezinta labul respectiv(ex: Schelet laborator list)
-- dezvoltarea laboratoarelor poate fi facuta ___pe orice platforma acum___ datorita unui update in makefile-ul din src
-- se vor sterge acest observati dupa ce au fost create laboratoarele si se vor scrie cerintele specifice laboratorului 
+<h4>Cerințe:</h4>
+
+1. Implementati o functie ce transforma un graf reprezentat de o matrice de adiacenta intr-unul reprezentat cu ajutorul listelor de adiacenta si eliberati memoria grafului primit ca parametru.
+2. Implementati o functie ce transforma un graf reprezentat prin liste de adiacenta intr-unul reprezentat cu ajutorul unei matrice de adiacenta si eliberati memoria grafului primit ca parametru.
+3. Roy-Warshall : Implementati o functie ce ce genereaza matricea drumurilor unui graf reprezentat cu ajutorul matricei de adiacenta.
+
+#### Puteti afla mai multe legat de modul de lucru [aici](https://github.com/sda-ab/student-setup#indicatii-rezolvare-laborator)
+
+### Observatii 
+- **teste:**
+  - Comanda **make test** va rula toate testele.
+  - Comanda **make test-cX** (unde **X** e nr cerintei: **1,2,3**) va rula doar testele pentru cerinta **X**

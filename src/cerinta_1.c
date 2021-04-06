@@ -2,7 +2,7 @@
 
 
 /**
- * TODO:   Implementati o functie ce transforma un graf reprezentat de o matrice de adiacenta 
+ * TODO:   O functie ce transforma un graf reprezentat de o matrice de adiacenta 
  * intr-unul reprezentat cu ajutorul listelor de adiacenta
  * @note   Nodurile sunt indexate intre 0 si V-1
  * @param  graph: Graful in reprezentarea matrice de adiacenta
@@ -13,7 +13,7 @@ graph_list* matrixToList(graph_matrix* graph) {
 }
 
 /**
- * TODO:    Eliberati memoria grafului primit ca parametru
+ * TODO:   Eliberati memoria grafului primit ca parametru
  * @note   Nodurile sunt indexate intre 0 si V-1
  * @param  graph: Graful in reprezentarea matrice de adiacenta, a carui memorie trebuie eliberata
  * @retval 
@@ -24,12 +24,12 @@ void free_graph_matrix(graph_matrix** graph) {
 
 
 node* push_values(node* root, int val) {
-    // nice to have
+    // nice to have; functie de adauga o valoare intr-o lista
 }
 
 
 void print_graph_list(graph_list* graph) {
-    // nice to have
+    // nice to have; functie care afiseaza continutul unui graf reprezentat prin liste de adiacenta
 }
 
 
