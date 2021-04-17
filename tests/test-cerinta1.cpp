@@ -23,7 +23,8 @@ TEST_CASE("Cerinta 1: Transformare din reprezentare cu matrice in reprezentare c
             node* newNode = graph_l_transformed->listHeads[i];
             node* refNode = graph_l->listHeads[i];
             while(refNode != NULL) {
-                REQUIRE(newNode != NULL);
+                bool conditie = newNode != NULL;
+                REQUIRE(conditie == true);
                 REQUIRE(newNode->vertexNr == refNode->vertexNr);
                 refNode = refNode->next;
                 newNode = newNode->next;
@@ -37,7 +38,8 @@ TEST_CASE("Cerinta 1: Transformare din reprezentare cu matrice in reprezentare c
 	{
         graph_m = readMatrix(TASK1_TEST_FILENAME2);
         free_graph_matrix(&graph_m);
-        REQUIRE(graph_m == NULL);
+        bool conditie = graph_m == NULL;
+        REQUIRE(conditie == true);
 	}
 	
 }

@@ -13,7 +13,8 @@ TEST_CASE("Cerinta 2: Transformare din reprezentare cu liste in reprezentare cu 
 		graph_l = readList(TASK2_TEST_FILENAME1);
         graph_m = readMatrix(TASK2_TEST_FILENAME2);
         graph_m_transformed = listToMatrix(graph_l);
-        REQUIRE(graph_m_transformed != NULL);
+        bool conditie = graph_m_transformed != NULL;
+        REQUIRE(conditie == true);
         REQUIRE(graph_m_transformed->matrix != NULL);
 
         REQUIRE(graph_m_transformed->E == graph_m->E);
@@ -33,7 +34,8 @@ TEST_CASE("Cerinta 2: Transformare din reprezentare cu liste in reprezentare cu 
 	{
         graph_l = readList(TASK2_TEST_FILENAME1);
         free_graph_list(&graph_l);
-        REQUIRE(graph_l == NULL);
+        bool conditie = graph_l == NULL;
+        REQUIRE(conditie == true);
 	}
 	
 }
