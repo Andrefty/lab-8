@@ -28,10 +28,10 @@ graph_list *matrixToList(graph_matrix *graph)
         for (int j = 0; j < graph->V; j++)
             if (graph->matrix[i][j] == 1)
             {
-                node *newnode = (node *)malloc(sizeof(node));
-                newnode->vertexNr = j;
-                newnode->next = NULL;
-                p->next = newnode; //adaug varful
+                node *newnode1 = (node *)malloc(sizeof(node));
+                newnode1->vertexNr = j;
+                newnode1->next = NULL;
+                p->next = newnode1;
                 p = p->next;
                 (g->E)++;
             }
@@ -46,6 +46,12 @@ graph_list *matrixToList(graph_matrix *graph)
 */
 void free_graph_matrix(graph_matrix **graph)
 {
+    for(int i=0;i<((*graph)->V);i++)
+    {
+        free((*graph)->matrix[i]);
+
+    }
+    free(graph);
 }
 
 node *push_values(node *root, int val)
