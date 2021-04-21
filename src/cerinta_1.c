@@ -8,7 +8,7 @@
  * @retval - Graful in reprezentarea liste de adiacenta
  */
 graph_list *matrixToList(graph_matrix *graph)
-{   
+{
     graph_list *g = (graph_list *)malloc(sizeof(graph_list));
     g->V = graph->V;
     g->E = graph->E;
@@ -40,18 +40,18 @@ graph_list *matrixToList(graph_matrix *graph)
 void free_graph_matrix(graph_matrix **graph)
 {
     int i;
-    for ( i = 0; i < ((*graph)->V); i++)
-    {   
+    for (i = 0; i < ((*graph)->V); i++)
+    {
         free((*graph)->matrix[i]);
     }
     free(*graph);
-    *graph=NULL;
+    *graph = NULL;
 }
 
 node *push_values(node *root, int val)
 {
     // nice to have; functie de adauga o valoare intr-o lista
-    node *cop=root;
+    node *cop = root;
     node *newnode1 = (node *)malloc(sizeof(node));
     newnode1->vertexNr = val;
     newnode1->next = NULL;
