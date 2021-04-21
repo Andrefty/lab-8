@@ -34,3 +34,5 @@ build/
 
 # vscode
 .vscode/
+src/makefile
+tests/makefile

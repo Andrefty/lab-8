@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g -Wall -std=c++11
+CXXFLAGS = -g -Wall
 FLAGS = -g -Wall -o
 ifeq ($(OS), Windows_NT)
     SHARED-LIB = liblab-template.dll

@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -g -Wall -std=c++11
+CXXFLAGS = -g -Wall
 EXECUTABLE = tests
 SHARED-LIB = lab-template
 BUILD_FOLDER_PATH = ../build/
