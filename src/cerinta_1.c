@@ -8,34 +8,17 @@
  * @retval - Graful in reprezentarea liste de adiacenta
  */
 graph_list *matrixToList(graph_matrix *graph)
-{
+{   
     graph_list *g = (graph_list *)malloc(sizeof(graph_list));
-    g->V = 0;
-    g->E = 0;
+    g->V = graph->V;
+    g->E = graph->E;
     if (g == NULL)
     {
         printf(" no memory for this graph");
         return NULL;
     }
     g->listHeads = (node **)calloc(graph->V, sizeof(node *));
-    // for (int i = 0; i < graph->V; i++)
-    // {
-    //     node *newnode = (node *)malloc(sizeof(node));
-    //     newnode->vertexNr = i;
-    //     newnode->next = NULL;
-    //     g->listHeads[i] = newnode;
-    //     node *p = g->listHeads[i];
-    //     for (int j = 0; j < graph->V; j++)
-    //         if (graph->matrix[i][j] == 1)
-    //         {
-    //             node *newnode1 = (node *)malloc(sizeof(node));
-    //             newnode1->vertexNr = j;
-    //             newnode1->next = NULL;
-    //             p->next = newnode1;
-    //             p = p->next;
-    //             (g->E)++;
-    //         }
-    // }
+     printf(" inainte de parcurgere");
     for (int i = 0; i < graph->V; i++)
     {
         for (int j = 0; j < graph->V; j++)
@@ -46,6 +29,7 @@ graph_list *matrixToList(graph_matrix *graph)
             }
         }
     }
+    return g;
 }
 
 /**
@@ -60,12 +44,14 @@ void free_graph_matrix(graph_matrix **graph)
     {
         free((*graph)->matrix[i]);
     }
+    free(*graph);
     free(graph);
 }
 
 node *push_values(node *root, int val)
 {
     // nice to have; functie de adauga o valoare intr-o lista
+     printf(" in push %d\n",val);
     node *cop=root;
     node *newnode1 = (node *)malloc(sizeof(node));
     newnode1->vertexNr = val;
