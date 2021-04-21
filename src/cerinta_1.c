@@ -41,11 +41,11 @@ graph_list *matrixToList(graph_matrix *graph)
 void free_graph_matrix(graph_matrix **graph)
 {
     for (int i = 0; i < ((*graph)->V); i++)
-    {
+    {   
         free((*graph)->matrix[i]);
     }
-    free(*graph);
-    free(graph);
+    // free(*graph);
+    // graph=NULL;
 }
 
 node *push_values(node *root, int val)
