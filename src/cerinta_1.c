@@ -18,7 +18,6 @@ graph_list *matrixToList(graph_matrix *graph)
         return NULL;
     }
     g->listHeads = (node **)calloc(graph->V, sizeof(node *));
-     printf(" inainte de parcurgere");
     for (int i = 0; i < graph->V; i++)
     {
         for (int j = 0; j < graph->V; j++)
@@ -40,18 +39,18 @@ graph_list *matrixToList(graph_matrix *graph)
 */
 void free_graph_matrix(graph_matrix **graph)
 {
-    for (int i = 0; i < ((*graph)->V); i++)
+    int i;
+    for ( i = 0; i < ((*graph)->V); i++)
     {   
         free((*graph)->matrix[i]);
     }
-    // free(*graph);
-    // graph=NULL;
+    free(*graph);
+    *graph=NULL;
 }
 
 node *push_values(node *root, int val)
 {
     // nice to have; functie de adauga o valoare intr-o lista
-     printf(" in push %d\n",val);
     node *cop=root;
     node *newnode1 = (node *)malloc(sizeof(node));
     newnode1->vertexNr = val;
