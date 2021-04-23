@@ -36,3 +36,7 @@ build/
 .vscode/
 src/makefile
 tests/makefile
+src/makefile
+.gitignore
+src/makefile
+tests/makefile

@@ -52,7 +52,7 @@ node *push_values(node *root, int val)
 {
     // nice to have; functie de adauga o valoare intr-o lista
     node *cop = root;
-    node *newnode1 = (node *)malloc(sizeof(node));
+    node *newnode1 = (node *)calloc(1,sizeof(node));
     newnode1->vertexNr = val;
     newnode1->next = NULL;
 
